@@ -37,7 +37,7 @@ const ProductsDetails: React.FC = () => {
   }, [title, products]);
   
 
-//   console.log(product); // Ensure to remove in production
+  console.log(product); // Ensure to remove in production
 
   const { img, title: productTitle, description, rating, brand, price } = product || {};
 
