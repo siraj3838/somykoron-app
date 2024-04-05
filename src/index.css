@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+    height: 100%;
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    @apply text-gray-500;
+}
+
+
+
+/* Spinner Css  */
+.loading-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 300px; /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .cube.rotate {
+    z-index: 11;
+    animation: panel 12.0s infinite forwards;
+  }
+  
+  .cube div {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 160px; /* Adjusted font size */
+    background: linear-gradient(to right, #752efac3, #4b6fffad); /* Gradient background */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Adding shadow to each side */
+    color: #fff;
+  }
+  
+  .front {
+    transform: translateZ(150px); /* Adjusted translateZ value */
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(150px); /* Adjusted translateZ value */
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(150px); /* Adjusted translateZ value */
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(150px); /* Adjusted translateZ value */
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(150px); /* Adjusted translateZ value */
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(150px); /* Adjusted translateZ value */
+  }
+  
+  @keyframes panel {
+    0% {
+      transform: rotateX(0deg) rotateZ(0deg);
+    }
+    17% {
+      transform: rotateY(-90deg);
+    }
+    34% {
+      transform: rotateX(-90deg);
+    }
+    51% {
+      transform: rotateX(90deg) rotateY(180deg) rotateX(90deg);
+    }
+    68% {
+      transform: rotateY(90deg);
+    }
+    85% {
+      transform: rotateX(90deg);
+    }
+  }
+
+
+  @media (max-width: 768px) {
+  
+  /* cube spinner responsive */
+  .loading-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 180px; /* Adjusted width */
+    height: 180px; /* Adjusted height */
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .cube.rotate {
+    z-index: 11;
+    animation: panel 12.0s infinite forwards;
+  }
+  
+  .cube div {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 55px; /* Adjusted font size */
+    background: linear-gradient(to right, #752efac3, #4b6fffad); /* Gradient background */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Adding shadow to each side */
+    color: #fff;
+  }
+  
+  .front {
+    transform: translateZ(90px); /* Adjusted translateZ value */
+  }
+  
+  .back {
+    transform: rotateY(180deg) translateZ(90px); /* Adjusted translateZ value */
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(90px); /* Adjusted translateZ value */
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(90px); /* Adjusted translateZ value */
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(90px); /* Adjusted translateZ value */
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(90px); /* Adjusted translateZ value */
+  }
+  
+  @keyframes panel {
+    0% {
+      transform: rotateX(0deg) rotateZ(0deg);
+    }
+    17% {
+      transform: rotateY(-90deg);
+    }
+    34% {
+      transform: rotateX(-90deg);
+    }
+    51% {
+      transform: rotateX(90deg) rotateY(180deg) rotateX(90deg);
+    }
+    68% {
+      transform: rotateY(90deg);
+    }
+    85% {
+      transform: rotateX(90deg);
+    }
+  }
+  
+  }
+  
